@@ -1,0 +1,53 @@
+# Daily Beltway — Brand Configuration
+# Version: 1.0.0
+#
+# This is the single source of truth for all brand identity values.
+# All font paths are relative to the project root (daily-beltway/).
+# The system will hard-fail at startup if any required font is missing.
+# Do NOT add fallback fonts — failures must be loud.
+
+brand_name: "Daily Beltway"
+brand_version: "1.0.0"
+
+colors:
+  primary_navy:  "#1B2A4A"
+  accent_red:    "#C8102E"
+  white:         "#FFFFFF"
+  black:         "#000000"
+  overlay_dark:  "#000000"   # Color used for background darkening drawbox
+
+fonts:
+  # REQUIRED: Place these TTF files in assets/fonts/ before first run.
+  # Recommended: Barlow Condensed ExtraBold + Barlow SemiBold from Google Fonts.
+  # On the server: wget "https://fonts.google.com/..." or use setup.sh
+  headline_font: "assets/fonts/BarlowCondensed-ExtraBold.ttf"
+  body_font:     "assets/fonts/Barlow-SemiBold.ttf"
+  label_font:    "assets/fonts/Barlow-Bold.ttf"
+
+logo:
+  path:               "assets/logos/daily_beltway_logo.png"
+  default_width_pct:  0.15     # 15% of canvas width → 162px at 1080-wide
+  padding_px:         24       # Distance from canvas edge (all sides)
+  opacity:            1.0      # 1.0 = fully opaque; never auto-scale below 0.9
+  position:           "top-right"  # top-right | top-left | bottom-right | bottom-left
+
+gradient:
+  use_overlay_png:    true     # Use pre-generated PNG for smooth gradient
+  overlay_dir:        "assets/overlays"
+  bottom_height_pct:  0.55     # Gradient covers bottom 55% of frame
+  opacity:            0.82     # PNG overlay blend opacity
+
+background_darkening:
+  color:           "#000000"
+  default_opacity: 0.45        # Applied before gradient overlay
+
+export:
+  jpeg_quality:    2           # FFmpeg -q:v 2 ≈ 95% quality (1 is max, 31 is min)
+  png_compression: 0           # FFmpeg -compression_level 0 = lossless/fastest
+  video_crf:       18          # libx264 CRF (18 = visually lossless for IG)
+  video_preset:    "slow"      # x264 preset: slower = better compression ratio
+  video_codec:     "libx264"
+  video_pix_fmt:   "yuv420p"  # Required for broad device + Instagram compatibility
+  audio_codec:     "aac"
+  audio_bitrate:   "192k"
+  video_fps:       30

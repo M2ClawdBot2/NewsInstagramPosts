@@ -1,0 +1,60 @@
+# Engagement Bait Feed Post — 1080x1080 JPEG
+template_type: "engagement_bait"
+label: "Engagement Bait Feed Post"
+canvas_width:    1080
+canvas_height:   1080
+safe_margin_px:  40
+
+background_darkening:
+  opacity: 0.58   # Heavier darkening — more overlay = better text contrast
+
+lower_gradient:
+  enabled: true
+
+label_region:
+  enabled: false  # No "BREAKING NEWS" band on engagement posts
+
+headline_box:
+  x:            40
+  y:            300
+  width:        1000
+  height:       340
+  font:         "headline_font"
+  font_size:    72
+  color:        "#FFFFFF"
+  line_spacing: 8
+  max_chars_per_line: 24
+
+subheadline_box:
+  enabled: false
+
+poll_boxes:
+  enabled: true
+  option_a:
+    x:                 40
+    y:                 720
+    width:             480
+    height:            88
+    background_color:  "#1B2A4A"
+    background_opacity: 0.92
+    text:              "YES"
+    text_color:        "#FFFFFF"
+    font:              "headline_font"
+    font_size:         46
+  option_b:
+    x:                 560
+    y:                 720
+    width:             480
+    height:            88
+    background_color:  "#C8102E"
+    background_opacity: 0.92
+    text:              "NO"
+    text_color:        "#FFFFFF"
+    font:              "headline_font"
+    font_size:         46
+
+logo_position: "top-right"
+
+export:
+  format:  "jpeg"
+  quality: 2

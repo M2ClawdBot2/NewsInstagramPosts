@@ -1,0 +1,50 @@
+# Reel Cover Image — 1080x1920 JPEG (vertical)
+template_type: "reel_cover"
+label: "Reel Cover Image"
+canvas_width:    1080
+canvas_height:   1920
+safe_margin_px:  48
+
+blur_pad:
+  enabled:      true
+  blur_radius:  22    # boxblur luma_radius for background fill
+  blur_power:   4
+
+background_darkening:
+  opacity: 0.48
+
+lower_gradient:
+  enabled: true   # Uses brand gradient; covers bottom 55% of 1920px frame
+
+label_region:
+  enabled:          true
+  text:             "WATCH NOW"
+  x:                0
+  y:                1620
+  width:            1080
+  height:           72
+  background_color: "#C8102E"
+  text_color:       "#FFFFFF"
+  font:             "label_font"
+  font_size:        34
+  text_x_offset:    48
+
+headline_box:
+  x:            48
+  y:            1700
+  width:        984
+  height:       176
+  font:         "headline_font"
+  font_size:    76
+  color:        "#FFFFFF"
+  line_spacing: 6
+  max_chars_per_line: 22
+
+subheadline_box:
+  enabled: false
+
+logo_position: "top-right"
+
+export:
+  format:  "jpeg"
+  quality: 2

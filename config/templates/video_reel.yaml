@@ -1,0 +1,61 @@
+# Video Reel — 1080x1920 MP4
+template_type: "video_reel"
+label: "Video Reel"
+canvas_width:    1080
+canvas_height:   1920
+safe_margin_px:  48
+
+blur_pad:
+  enabled:      true
+  blur_radius:  26
+  blur_power:   4
+
+background_darkening:
+  opacity: 0.35   # Lighter than stills — motion content is primary
+
+lower_gradient:
+  enabled: false  # Lower-third handles brand anchor instead
+
+lower_third:
+  enabled:          true
+  accent_line:
+    x:              0
+    y:              1728
+    width:          1080
+    height:         6
+    color:          "#C8102E"
+  brand_bug_text:   "DAILY BELTWAY"
+  brand_bug_x:      48
+  brand_bug_y:      1744
+  brand_bug_font:   "label_font"
+  brand_bug_size:   30
+  brand_bug_color:  "#C8102E"
+  headline_x:       48
+  headline_y:       1786
+  headline_font:    "headline_font"
+  headline_size:    52
+  headline_color:   "#FFFFFF"
+  headline_max_chars: 30
+
+subtitles:
+  enabled: true
+  force_style: >-
+    FontName=Barlow SemiBold,FontSize=38,PrimaryColour=&HFFFFFF,
+    OutlineColour=&H000000,Outline=2,Shadow=0,Alignment=2,MarginV=240,
+    Bold=1
+
+logo_position: "top-right"
+
+export:
+  format:       "mp4"
+  crf:          18
+  preset:       "slow"
+  pix_fmt:      "yuv420p"
+  fps:          30
+  audio_codec:  "aac"
+  audio_bitrate: "192k"
+  movflags:     "+faststart"
+
+cover_image:
+  enabled:        true
+  extract_second: 0.5   # Extract cover frame at 0.5s into the video

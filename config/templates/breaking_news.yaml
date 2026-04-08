@@ -1,0 +1,53 @@
+# Breaking News Feed Post — 1080x1080 JPEG
+template_type: "breaking_news"
+label: "Breaking News Feed Post"
+canvas_width:    1080
+canvas_height:   1080
+safe_margin_px:  40
+
+background_darkening:
+  opacity: 0.52   # Slightly darker than brand default for text legibility
+
+lower_gradient:
+  enabled: true   # Uses brand gradient settings
+
+label_region:
+  enabled:          true
+  text:             "BREAKING NEWS"
+  x:                0
+  y:                818
+  width:            1080
+  height:           76
+  background_color: "#C8102E"
+  text_color:       "#FFFFFF"
+  font:             "label_font"
+  font_size:        34
+  text_x_offset:   40    # padding from left edge of label band
+
+headline_box:
+  x:           40
+  y:           560
+  width:       1000
+  height:      240
+  font:        "headline_font"
+  font_size:   78
+  color:       "#FFFFFF"
+  line_spacing: 6
+  max_chars_per_line: 22   # soft wrap guidance for upstream text prep
+
+subheadline_box:
+  enabled:    true
+  x:          40
+  y:          768
+  width:      1000
+  height:     48
+  font:       "body_font"
+  font_size:  34
+  color:      "#FFFFFF"
+  opacity:    0.88
+
+logo_position: "top-right"   # inherits brand default; explicit for clarity
+
+export:
+  format:  "jpeg"
+  quality: 2

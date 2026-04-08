@@ -1,0 +1,49 @@
+# Quote Card Feed Post — 1080x1080 JPEG
+template_type: "quote_card"
+label: "Quote Card"
+canvas_width:    1080
+canvas_height:   1080
+safe_margin_px:  48
+
+background_darkening:
+  opacity: 0.72   # Heavy — quote cards often use image as texture only
+
+lower_gradient:
+  enabled: false  # Quote cards use uniform dark, not gradient at bottom
+
+accent_bar:
+  enabled:          true
+  x:                48
+  y:                180
+  width:            8
+  height:           560
+  color:            "#C8102E"
+
+quote_box:
+  x:             72       # 48 margin + 8 bar + 16 gap
+  y:             200
+  width:         960
+  height:        480
+  font:          "headline_font"
+  font_size:     64
+  color:         "#FFFFFF"
+  line_spacing:  10
+  max_chars_per_line: 28
+
+attribution_box:
+  x:          72
+  y:          720
+  width:      960
+  height:     56
+  font:       "body_font"
+  font_size:  36
+  color:      "#C8102E"   # Red attribution for visual punch
+
+label_region:
+  enabled: false
+
+logo_position: "bottom-right"
+
+export:
+  format:  "jpeg"
+  quality: 2

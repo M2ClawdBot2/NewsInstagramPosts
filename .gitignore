@@ -1,0 +1,43 @@
+# Environment
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Output (rendered media — do not commit)
+output/READY_TO_REVIEW/*/
+
+# Generated assets (regenerate with scripts/generate_overlays.py)
+assets/overlays/*.png
+assets/backgrounds/*.png
+
+# Logo (place manually on server; do not commit)
+assets/logos/*.png
+assets/logos/*.jpg
+
+# Fonts (download separately; see README)
+assets/fonts/*.ttf
+assets/fonts/*.otf
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Test artifacts
+.pytest_cache/
+.coverage

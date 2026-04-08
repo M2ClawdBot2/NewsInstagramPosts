@@ -1,0 +1,52 @@
+# Carousel Slide — 1080x1080 JPEG
+template_type: "carousel_slide"
+label: "Carousel Slide"
+canvas_width:    1080
+canvas_height:   1080
+safe_margin_px:  40
+
+background_darkening:
+  opacity: 0.50
+
+lower_gradient:
+  enabled: true
+
+label_region:
+  enabled: false
+
+headline_box:
+  x:            40
+  y:            560
+  width:        1000
+  height:       240
+  font:         "headline_font"
+  font_size:    74
+  color:        "#FFFFFF"
+  line_spacing: 6
+  max_chars_per_line: 22
+
+subheadline_box:
+  enabled:    true
+  x:          40
+  y:          810
+  width:      900
+  height:     48
+  font:       "body_font"
+  font_size:  32
+  color:      "#FFFFFF"
+  opacity:    0.85
+
+slide_indicator:
+  enabled:    true
+  x:          920     # Right-aligned; renderer computes exact x from canvas_width
+  y:          1040    # Near bottom
+  font:       "label_font"
+  font_size:  26
+  color:      "#FFFFFF"
+  opacity:    0.60
+
+logo_position: "top-right"
+
+export:
+  format:  "jpeg"
+  quality: 2
